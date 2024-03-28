@@ -1,0 +1,22 @@
+[package]
+name = "logger-service"
+version = "0.1.0"
+edition = "2021"
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+tonic = "0.11"
+prost = "0.12"
+tokio = { version = "1.0", features = ["macros", "rt-multi-thread"] }
+futures = "0.3.28"
+serde = "1.0.188"
+bson = "2.9.0"
+dotenv = "0.15.0"
+
+[dependencies.mongodb]
+version = "2.8.2"
+features = ["tokio-runtime"]
+
+[build-dependencies]
+tonic-build = "0.11"
